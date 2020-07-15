@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="blog.css" />
+    <title>New Story</title>
+  </head>
+  <body>
+    <div class="blog-surface">
+      <div class="surface">
+        <div class="blog-nav d-flex mx-auto py-4">
+          <div class="blog-nav-left">
+            <img
+              src="./images/monk arena light.png"
+              alt=""
+              width="150"
+              class="logo"
+            />
+          </div>
+          <div class="blog-nav-right">
+            <div class="d-flex">
+              <div class="blog-buttons">
+                <button class="btn btn-sm btn-danger">Cancel</button>
+                <button class="btn btn-sm btn-success">Publish</button>
+              </div>
+              <div class="user-avtar ml-4">
+                <img
+                  src="./images/monk-avtar.png"
+                  alt=""
+                  class="img-rounded"
+                  height="40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <main class="blog-main my-1">
+          <div class="blog-inner mx-auto">
+            <input
+              type="text"
+              id="blog-title-input"
+              placeholder="Title"
+              class="form-control mb-2 h3"
+            />
+            <textarea
+              id="blog-desc-input"
+              cols="30"
+              rows="10"
+              class="from-control"
+            >
+Write your thought's</textarea
+            >
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
