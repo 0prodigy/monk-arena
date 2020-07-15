@@ -19,3 +19,19 @@ function validateUser(email, password) {
   }
   return false;
 }
+
+function registerUser(email, password) {
+  if (validateUser(email, password)) {
+    console.log("User Already Exist Try login");
+  } else {
+    let user = new User({
+      id: users.length + 1,
+      email: email,
+      password: password,
+    });
+    users.push(user);
+  }
+}
+
+registerUser("vikash@gmail.com", "1234");
+console.log(users);
