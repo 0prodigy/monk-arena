@@ -1,4 +1,5 @@
-let users = [];
+const users = [];
+const blogs = [];
 
 let user = new User({
   id: 1,
@@ -35,3 +36,21 @@ function registerUser(email, password) {
 
 registerUser("vikash@gmail.com", "1234");
 console.log(users);
+
+let blog = new Blog({
+  id: blogs.length + 1,
+  title: "This is title",
+  blog: "This is description",
+  tag: ["react", "js"],
+  user: users[0].id,
+});
+
+function addBlog(blog) {
+  blogs.push(blog);
+}
+addBlog(blog);
+
+console.log(blogs[0].getBlog());
+
+users[0].addFollower(users[1].id);
+console.log(users[0].getFollower());
