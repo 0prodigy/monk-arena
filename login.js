@@ -1,3 +1,18 @@
+window.onload = () => {
+  users = JSON.parse(localStorage.getItem("users")) || [];
+  let signUpBtn = document.getElementById("finalsignup");
+  signUpBtn.addEventListener("click", handleRegister);
+
+  let loginbtn = document.getElementById("loginbtn");
+  loginbtn.addEventListener("click", handleLogin);
+
+  let loginToggle = document.getElementById("loginToggle");
+  let signUpToggle = document.getElementById("signUpToggle");
+
+  loginToggle.addEventListener("click", handleToogle);
+  signUpToggle.addEventListener("click", handleToogle);
+};
+
 let users = [];
 function validateUser(email, password) {
   for (let i = 0; i < users.length; i++) {
@@ -15,9 +30,19 @@ function loginUser(email, password) {
       "loginUser",
       JSON.stringify(validateUser(email, password))
     );
+    window.location.href = "./profile.html";
   } else {
-    console.log("You are not register");
+    generateError("You are not register");
   }
+}
+
+function handleLogin() {
+  event.preventDefault();
+  let email = document.getElementById("loginEmail").value;
+  let password = document.getElementById("loginPassword").value;
+  loginUser(email, password);
+  let loginForm = document.getElementById("loginForm");
+  loginForm.reset();
 }
 
 function generateError(message) {
@@ -61,10 +86,15 @@ function handleRegister() {
   }
 }
 
-window.onload = () => {
-  users = JSON.parse(localStorage.getItem("users")) || [];
-  let signUpBtn = document.getElementById("finalsignup");
-  signUpBtn.addEventListener("click", handleRegister);
+function handleToogle() {
+  let loginForm = document.getElementById("loginForm");
+  let signUpForm = document.getElementById("signUpForm");
 
-  let loginToggle = document.getElementById("loginToggle");
-};
+  if (loginForm.getAttribute("class") == "d-none") {
+    signUpForm.setAttribute("class", "d-none");
+    loginForm.setAttribute("class", "d-block");
+  } else {
+    loginForm.setAttribute("class", "d-none");
+    signUpForm.setAttribute("class", "d-block");
+  }
+}
