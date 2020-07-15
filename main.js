@@ -1,16 +1,6 @@
 const users = [];
 const blogs = [];
 
-let user = new User({
-  id: 1,
-  name: "akash",
-  email: "pathakvikash9211",
-  password: "123",
-  blog: ["this", "that"],
-});
-
-users.push(user);
-
 function validateUser(email, password) {
   for (let i = 0; i < users.length; i++) {
     const user = users[i];
@@ -19,6 +9,17 @@ function validateUser(email, password) {
     }
   }
   return false;
+}
+
+function loginUser(email, password) {
+  if (validateUser(email, password)) {
+    localStorage.setItem(
+      "loginUser",
+      JSON.stringify(validateUser(email, password))
+    );
+  } else {
+    console.log("You are not register");
+  }
 }
 
 function registerUser(email, password) {
@@ -30,27 +31,16 @@ function registerUser(email, password) {
       email: email,
       password: password,
     });
+    let registerUsers = JSON.parse(localStorage.getItem("users")) || [];
+    registerUsers.push(user);
+    localStorage.setItem("users", JSON.stringify(registerUsers));
     users.push(user);
   }
 }
 
-registerUser("vikash@gmail.com", "1234");
-console.log(users);
-
-let blog = new Blog({
-  id: blogs.length + 1,
-  title: "This is title",
-  blog: "This is description",
-  tag: ["react", "js"],
-  user: users[0].id,
-});
+registerUser("pathakvikash@9211", "1234");
+loginUser("pathakvikash@9211", "12345");
 
 function addBlog(blog) {
   blogs.push(blog);
 }
-addBlog(blog);
-
-console.log(blogs[0].getBlog());
-
-users[0].addFollower(users[1].id);
-console.log(users[0].getFollower());
