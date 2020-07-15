@@ -19,7 +19,7 @@ function createRow(blog) {
             <div class="card">
               <a class="nav-link" href="#"
                 ><img
-                  src="${blog.user.photo || "./images/monk-avtar.png"}"
+                  src="${blog.user.picture}"
                   alt="Monk Arena"
                   class="img-fluid img-responsive rounded-circle"
                   style="width: 27px; height: 27px;"

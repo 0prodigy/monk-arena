@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="blog-surface">
+      <div id="errorMsg" class="p-5 fixed-top d-none"></div>
       <div class="surface">
         <div class="blog-nav d-flex mx-auto py-4">
           <div class="blog-nav-left">
@@ -25,8 +26,12 @@
           <div class="blog-nav-right">
             <div class="d-flex">
               <div class="blog-buttons">
-                <button class="btn btn-sm btn-danger">Cancel</button>
-                <button class="btn btn-sm btn-success">Publish</button>
+                <button class="btn btn-sm btn-danger" id="blogCancel">
+                  Cancel
+                </button>
+                <button class="btn btn-sm btn-success" id="blogPublish">
+                  Publish
+                </button>
               </div>
               <div class="user-avtar ml-4">
                 <img
@@ -47,6 +52,12 @@
               placeholder="Title"
               class="form-control mb-2 h3"
             />
+            <input
+              type="text"
+              id="blog-thumb-img"
+              placeholder="Thumbnail Image Url"
+              class="form-control mb-2 h5"
+            />
             <textarea
               id="blog-desc-input"
               cols="30"
@@ -59,5 +70,8 @@ Write your thought's</textarea
         </main>
       </div>
     </div>
+    <script src="Blog.js"></script>
+    <script src="main.js"></script>
+    <script src="add-blog.js"></script>
   </body>
 </html>

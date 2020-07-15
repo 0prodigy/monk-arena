@@ -1,5 +1,5 @@
 function getlcoalUser() {
-  return JSON.parse(localStorage.getItem("lcoalUser")) || false;
+  return JSON.parse(localStorage.getItem("loginUser")) || false;
 }
 let lcoalUser = getlcoalUser();
 if (!lcoalUser) {
@@ -16,6 +16,12 @@ function generateError(message) {
   }, 3000);
 }
 
-// window.addEventListener("load", () => {
+function logoutFunc() {
+  localStorage.removeItem("loginUser");
+  window.location.reload();
+}
 
-// });
+window.addEventListener("load", () => {
+  let logout = document.getElementById("logout");
+  logout.addEventListener("click", logoutFunc);
+});

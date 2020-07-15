@@ -19,7 +19,7 @@ function publishBlog() {
     title: title,
     blog: blogDesc,
     photo: photo || "./images/add-post.svg",
-    user: getLoginUser(),
+    user: getlcoalUser(),
   });
 
   addBlog(blog);

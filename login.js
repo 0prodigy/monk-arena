@@ -45,15 +45,6 @@ function handleLogin() {
   loginForm.reset();
 }
 
-function generateError(message) {
-  let errorMsg = document.getElementById("errorMsg");
-  errorMsg.innerHTML = `<h5>${message}</h5>`;
-  errorMsg.setAttribute("class", "p-5 fixed-top badge badge-danger d-block");
-  setTimeout(() => {
-    window.location.reload();
-  }, 3000);
-}
-
 function registerUser(name, email, password) {
   if (validateUser(email, password)) {
     console.log("User Already Exist Try login");
@@ -64,6 +55,7 @@ function registerUser(name, email, password) {
       name: name,
       email: email,
       password: password,
+      photo: "./images/monk-avtar.png",
     });
     users = JSON.parse(localStorage.getItem("users")) || [];
     users.push(user);

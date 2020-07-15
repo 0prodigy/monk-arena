@@ -21,14 +21,23 @@
   padding: 0 20px;
   width: 100%; }
 
-#blog-title-input {
+#blog-title-input,
+#blog-thumb-img {
   border: none;
-  border-left: 1px solid rgba(102, 102, 102, 0.596);
   font-size: 2rem;
   border-radius: 0;
   padding-left: 15px; }
 
-#blog-title-input::placeholder {
+#blog-thumb-img {
+  font-size: 1.6rem;
+  padding-left: 20px; }
+
+input.focus-visible,
+textarea.focus-visible {
+  border-left: 1px solid rgba(102, 102, 102, 0.596) !important;
+  box-shadow: 0 0 0 transparent !important; }
+
+input::placeholder {
   color: rgba(102, 102, 102, 0.596);
   font-weight: 500; }
 
