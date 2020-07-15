@@ -5,12 +5,16 @@
   margin: -18px 38px 0px; }
 
 .profile-tabs .nav-link {
-  color: rgba(0, 0, 0, 0.84); }
+  color: rgba(0, 0, 0, 0.84);
+  font-weight: 600; }
 
 .profile-tabs .active {
   border: none;
   border-top: 1px solid;
   border-color: #000 !important;
   border-radius: 0; }
+
+.nav-item img {
+  width: 25px; }
 
 /*# sourceMappingURL=profile.css.map */
