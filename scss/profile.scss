@@ -83,3 +83,32 @@
     word-break: break-all;
   }
 }
+
+.edit-profile-wrapper {
+  border: 1px solid #bfbebe;
+  border-radius: 2px;
+
+  .col-3 {
+    border-right: 1px solid #bfbebe;
+  }
+  .nav-link.active {
+    background-color: transparent;
+    color: $primary-color;
+    border-left: 1.5px solid #000;
+    border-radius: 0;
+  }
+  .nav-link {
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  #edit-image {
+    width: 50px;
+    border-radius: 50%;
+  }
+  label.col-form-label {
+    text-align: right;
+    font-weight: 500;
+  }
+}
