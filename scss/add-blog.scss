@@ -30,3 +30,44 @@ $md-width: 1032px;
   padding: 0 20px;
   width: 100%;
 }
+
+#blog-title-input {
+  border: none;
+  border-left: 1px solid rgba(102, 102, 102, 0.596);
+  font-size: 2rem;
+  border-radius: 0;
+  padding-left: 15px;
+}
+
+#blog-title-input::placeholder {
+  color: rgba(102, 102, 102, 0.596);
+  font-weight: 500;
+}
+
+#blog-desc-input {
+  border: none;
+  padding-left: 30px;
+  color: rgba(102, 102, 102, 0.596);
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+#blog-desc-input::-moz-focus-outer,
+#blog-title-input::-moz-focus-outer {
+  border: none;
+}
+
+.btn-danger {
+  background-color: $red;
+}
+
+.btn-success {
+  background-color: $green;
+}
+
+.user-avtar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fefefe;
+}
