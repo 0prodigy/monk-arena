@@ -46,7 +46,5 @@ window.onload = () => {
   let loginUser = localStorage.getItem("loginUser");
   if (!loginUser) {
     window.location.href = "login.html";
-  } else {
-    window.location.href = "profile.html";
   }
 };

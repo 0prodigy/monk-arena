@@ -5,8 +5,8 @@ class User {
     email,
     password,
     gender,
-    picture,
-    bio,
+    picture = "./images/monk-avtar.png",
+    bio = "Namaste!! I am at Monk Arena",
     blog = [],
     followers = [],
   }) {
