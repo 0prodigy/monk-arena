@@ -1,20 +1,16 @@
-@import "color.scss";
-
 .profile-tabs {
-  border: none;
-}
+  border: none; }
 
 .profile-tabs .nav-item {
-  margin: -18px 38px 0px;
-}
+  margin: -18px 38px 0px; }
 
 .profile-tabs .nav-link {
-  color: $primary-color;
-}
+  color: rgba(0, 0, 0, 0.84); }
 
 .profile-tabs .active {
   border: none;
   border-top: 1px solid;
   border-color: #000 !important;
-  border-radius: 0;
-}
+  border-radius: 0; }
+
+/*# sourceMappingURL=profile.css.map */
