@@ -1,0 +1,32 @@
+@import "color.scss";
+
+$md-width: 1032px;
+
+.blog-surface {
+  height: 100%;
+  width: 100%;
+}
+
+.surface {
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+}
+
+.blog-nav {
+  max-width: $md-width;
+}
+
+.blog-nav-left {
+  flex: 1 1 auto;
+}
+
+.blog-nav-right {
+  flex: 0 0 auto;
+}
+
+.blog-inner {
+  max-width: 740px;
+  padding: 0 20px;
+  width: 100%;
+}
