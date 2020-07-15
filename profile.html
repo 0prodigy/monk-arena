@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="profile.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="nav-container">
+        <nav
+          class="navbar navbar-expand-lg navbar-light justify-content-around py-2 align-middle"
+        >
+          <div class="nav-left">
+            <a class="navbar-brand" href="#"
+              ><img
+                src="./images/monk arena light.png"
+                alt="Monk Arena"
+                class="logo img img-responsive"
+                width="150px"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="nav-mid">
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+          <div class="nav-right">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <section class="profile w-100">
+        <div class="container">
+          <div class="profile-stats">
+            <div class="row">
+              <div class="col-lg-4 my-2">
+                <img
+                  src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                  alt="Monk Arena"
+                  class="img-fluid img-responsive rounded-circle offset-lg-5"
+                  style="width: 200px; height: 200px;"
+                />
+              </div>
+              <div class="col-lg-8 my-2">
+                <h4 class="offset-lg-1 text-muted">_prodigy_</h4>
+                <br />
+                <h5 class="offset-lg-1 text-dark">
+                  99 Posts <span class="offset-1"></span> 153 followers
+                  <span class="offset-1"></span> 136 following
+                </h5>
+
+                <h5 class="offset-lg-1 text-dark mt-4">Akash Pathak</h5>
+                <h6 class="offset-lg-1 text-info">
+                  When you Love what you have,you have everything.
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <ul
+            class="nav nav-tabs justify-content-center profile-tabs"
+            id="myTab"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link active"
+                id="post-tab"
+                data-toggle="tab"
+                href="#post"
+                role="tab"
+                aria-controls="post"
+                aria-selected="true"
+                ><img src="./images/add-post.svg" alt="" /> Posts</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="profile-tab"
+                data-toggle="tab"
+                href="#profile"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+                ><img src="./images/user.svg" alt="" /> Profile</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="save-tab"
+                data-toggle="tab"
+                href="#save"
+                role="tab"
+                aria-controls="save"
+                aria-selected="false"
+                ><img src="./images/save.png" alt="" /> Save</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="feed-tab"
+                data-toggle="tab"
+                href="#feed"
+                role="tab"
+                aria-controls="feed"
+                aria-selected="false"
+                ><img src="./images/posts.svg" alt="" /> Feed</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="post"
+              role="tabpanel"
+              aria-labelledby="post-tab"
+            >
+              <div class="container py-5">
+                <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="post-container">
+                      <a class="post" href="#">
+                        <div class="post-img">
+                          <img src="" alt="" class="img-fluid" />
+                        </div>
+                        <div class="post-body">
+                          <span class="badge badge-primary">Fight</span>
+                          <span class="badge badge-success">Yoga</span>
+                          <div class="post-title">
+                            <h3>This is post title</h3>
+                          </div>
+                          <p class="post-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Corrupti mollitia aperiam quibusdam
+                            voluptatibus dignissimos dolor ipsa,
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="post-container">
+                      <a class="post" href="#">
+                        <div class="post-img">
+                          <img src="" alt="" class="img-fluid" />
+                        </div>
+                        <div class="post-body">
+                          <span class="badge badge-primary">Fight</span>
+                          <span class="badge badge-success">Yoga</span>
+                          <div class="post-title">
+                            <h3>This is post title</h3>
+                          </div>
+                          <p class="post-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Corrupti mollitia aperiam quibusdam
+                            voluptatibus dignissimos dolor ipsa,
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="post-container">
+                      <a class="post" href="#">
+                        <div class="post-img">
+                          <img src="" alt="" class="img-fluid" />
+                        </div>
+                        <div class="post-body">
+                          <span class="badge badge-primary">Fight</span>
+                          <span class="badge badge-success">Yoga</span>
+                          <div class="post-title">
+                            <h3>This is post title</h3>
+                          </div>
+                          <p class="post-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Corrupti mollitia aperiam quibusdam
+                            voluptatibus dignissimos dolor ipsa,
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="post-container">
+                      <a class="post" href="#">
+                        <div class="post-img">
+                          <img src="" alt="" class="img-fluid" />
+                        </div>
+                        <div class="post-body">
+                          <span class="badge badge-primary">Fight</span>
+                          <span class="badge badge-success">Yoga</span>
+                          <div class="post-title">
+                            <h3>This is post title</h3>
+                          </div>
+                          <p class="post-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Corrupti mollitia aperiam quibusdam
+                            voluptatibus dignissimos dolor ipsa,
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="post-container">
+                      <a class="post" href="#">
+                        <div class="post-img">
+                          <img src="" alt="" class="img-fluid" />
+                        </div>
+                        <div class="post-body">
+                          <span class="badge badge-primary">Fight</span>
+                          <span class="badge badge-success">Yoga</span>
+                          <div class="post-title">
+                            <h3>This is post title</h3>
+                          </div>
+                          <p class="post-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Corrupti mollitia aperiam quibusdam
+                            voluptatibus dignissimos dolor ipsa,
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="post-container">
+                      <a class="post" href="#">
+                        <div class="post-img">
+                          <img src="" alt="" class="img-fluid" />
+                        </div>
+                        <div class="post-body">
+                          <span class="badge badge-primary">Fight</span>
+                          <span class="badge badge-success">Yoga</span>
+                          <div class="post-title">
+                            <h3>This is post title</h3>
+                          </div>
+                          <p class="post-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Corrupti mollitia aperiam quibusdam
+                            voluptatibus dignissimos dolor ipsa,
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <div class="container py-3 mt-4 edit-profile-wrapper">
+                <div class="row">
+                  <div class="col-3">
+                    <div
+                      class="nav flex-column nav-pills"
+                      id="v-pills-tab"
+                      role="tablist"
+                      aria-orientation="vertical"
+                    >
+                      <a
+                        class="nav-link active"
+                        id="v-pills-profile-tab"
+                        data-toggle="pill"
+                        href="#v-pills-profile"
+                        role="tab"
+                        aria-controls="v-pills-profile"
+                        aria-selected="false"
+                        >Edit Profile</a
+                      >
+                      <a
+                        class="nav-link"
+                        id="v-pills-password-tab"
+                        data-toggle="pill"
+                        href="#v-pills-password"
+                        role="tab"
+                        aria-controls="v-pills-password"
+                        aria-selected="true"
+                        >Password</a
+                      >
+                      <a
+                        class="nav-link"
+                        id="v-pills-messages-tab"
+                        data-toggle="pill"
+                        href="#v-pills-messages"
+                        role="tab"
+                        aria-controls="v-pills-messages"
+                        aria-selected="false"
+                        >Followers</a
+                      >
+                      <a
+                        class="nav-link"
+                        id="v-pills-settings-tab"
+                        data-toggle="pill"
+                        href="#v-pills-settings"
+                        role="tab"
+                        aria-controls="v-pills-settings"
+                        aria-selected="false"
+                        >Following</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="v-pills-profile"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab"
+                      >
+                        <div class="container px-5 py-1">
+                          <div class="edit-profile container">
+                            <div class="row mb-4">
+                              <div class="col-4">
+                                <img
+                                  src="./images/monk-avtar.png"
+                                  alt=""
+                                  class="img-fluid"
+                                  id="edit-image"
+                                />
+                              </div>
+                              <div class="col-8">
+                                <a href="#" class="btn btn-primary">
+                                  Change Profile Photo
+                                </a>
+                              </div>
+                            </div>
+                            <form id="edit-profile-form mt-3">
+                              <div class="form-group row">
+                                <label
+                                  for="name"
+                                  class="col-sm-2 col-form-label"
+                                  >Name</label
+                                >
+                                <div class="col-sm-10">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    value="Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label
+                                  for="email"
+                                  class="col-sm-2 col-form-label"
+                                  >Email</label
+                                >
+                                <div class="col-sm-10">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="email"
+                                    value="pathakvikash9211@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="bio" class="col-sm-2 col-form-label"
+                                  >Bio</label
+                                >
+                                <div class="col-sm-10">
+                                  <textarea
+                                    type="text"
+                                    class="form-control"
+                                    id="bio"
+                                    rows="2"
+                                  >
+I'll Serve what you deserve</textarea
+                                  >
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label
+                                  for="gender"
+                                  class="col-sm-2 col-form-label"
+                                  >Gender</label
+                                >
+                                <div class="col-sm-10">
+                                  <select id="gender" class="form-control">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label
+                                  for="nation"
+                                  class="col-sm-2 col-form-label"
+                                  >Nationality</label
+                                >
+                                <div class="col-sm-10">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="nation"
+                                    value="India"
+                                  />
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="v-pills-password"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-password-tab"
+                      >
+                        <div class="container px-5 py-2">
+                          <form id="password-update">
+                            <div class="form-group row">
+                              <label
+                                for="oldPassword"
+                                class="col-sm-2 col-form-label"
+                                >Old Password
+                              </label>
+                              <div class="col-sm-10">
+                                <input
+                                  type="password"
+                                  class="form-control"
+                                  id="oldPassword"
+                                  value="*********"
+                                />
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label
+                                for="newPassword"
+                                class="col-sm-2 col-form-label"
+                                >New Password</label
+                              >
+                              <div class="col-sm-10">
+                                <input
+                                  type="password"
+                                  class="form-control"
+                                  id="newPassword"
+                                  value="*********"
+                                />
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label
+                                for="confirmPassword"
+                                class="col-sm-2 col-form-label"
+                                >Confirm Password</label
+                              >
+                              <div class="col-sm-10">
+                                <input
+                                  type="password"
+                                  class="form-control"
+                                  id="confirmPassword"
+                                  value="********"
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="v-pills-messages"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab"
+                      >
+                        <div class="container">
+                          <div class="row w-100 mx-auto my-2">
+                            <div class="col-12">
+                              <div class="d-flex justify-content-around">
+                                <div class="follower-img">
+                                  <img
+                                    src="./images/monk-avtar.png"
+                                    alt=""
+                                    class="img-fluid"
+                                    width="50px"
+                                  />
+                                </div>
+                                <div class="follower-name">
+                                  <h4>Akash Patha</h4>
+                                </div>
+                                <div class="follow-btn">
+                                  <button class="btn btn-success">
+                                    Follow
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row w-100 mx-auto my-2">
+                            <div class="col-12">
+                              <div class="d-flex justify-content-around">
+                                <div class="follower-img">
+                                  <img
+                                    src="./images/monk-avtar.png"
+                                    alt=""
+                                    class="img-fluid"
+                                    width="50px"
+                                  />
+                                </div>
+                                <div class="follower-name">
+                                  <h4>Akash Patha</h4>
+                                </div>
+                                <div class="follow-btn">
+                                  <button class="btn btn-success">
+                                    Follow
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row w-100 mx-auto my-2">
+                            <div class="col-12">
+                              <div class="d-flex justify-content-around">
+                                <div class="follower-img">
+                                  <img
+                                    src="./images/monk-avtar.png"
+                                    alt=""
+                                    class="img-fluid"
+                                    width="50px"
+                                  />
+                                </div>
+                                <div class="follower-name">
+                                  <h4>Akash Patha</h4>
+                                </div>
+                                <div class="follow-btn">
+                                  <button class="btn btn-success">
+                                    Follow
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row w-100 mx-auto my-2">
+                            <div class="col-12">
+                              <div class="d-flex justify-content-around">
+                                <div class="follower-img">
+                                  <img
+                                    src="./images/monk-avtar.png"
+                                    alt=""
+                                    class="img-fluid"
+                                    width="50px"
+                                  />
+                                </div>
+                                <div class="follower-name">
+                                  <h4>Akash Patha</h4>
+                                </div>
+                                <div class="follow-btn">
+                                  <button class="btn btn-success">
+                                    Follow
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="v-pills-settings"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab"
+                      >
+                        ...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="feed"
+              role="tabpanel"
+              aria-labelledby="feed-tab"
+            ></div>
+            <div
+              class="tab-pane fade"
+              id="save"
+              role="tabpanel"
+              aria-labelledby="save-tab"
+            >
+              ...
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
