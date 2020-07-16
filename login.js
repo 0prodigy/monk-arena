@@ -30,7 +30,7 @@ function loginUser(email, password) {
       "loginUser",
       JSON.stringify(validateUser(email, password))
     );
-    window.location.href = "./profile.html";
+    window.location.href = "./profile.html?me";
   } else {
     generateError("You are not register");
   }

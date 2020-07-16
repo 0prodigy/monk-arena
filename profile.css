@@ -95,4 +95,12 @@
   background: white;
   padding: 1rem; }
 
+#userSearchResult {
+  position: absolute;
+  top: 63px;
+  z-index: 999;
+  left: 28%;
+  background: #fff;
+  width: 400px; }
+
 /*# sourceMappingURL=profile.css.map */
