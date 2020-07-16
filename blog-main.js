@@ -104,7 +104,7 @@ function createRow(blog) {
                   >Liked by ${likedpep} & other ${blog.likes} People</small
                 >
 
-                <a href="#"
+                <a href="./blog.html?${blog.id}"
                   ><span class="text-info">
                     "${blog.title}"</span
                   ></a

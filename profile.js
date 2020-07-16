@@ -77,7 +77,7 @@ function renderBlogPosts(user) {
 function createBlogLayout(blog) {
   let html = `
       <div class="post-container">
-        <a class="post" href="#">
+        <a class="post" href="./blog.html?${blog.id}">
           <div class="post-img">
             <img src="${blog.photo}" alt="" class="img-fluid" />
           </div>

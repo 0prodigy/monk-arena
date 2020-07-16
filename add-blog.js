@@ -6,7 +6,7 @@ window.onload = () => {
   let blogCancel = document.getElementById("blogCancel");
   blogPublishBtn.addEventListener("click", publishBlog);
   blogCancel.addEventListener("click", () => {
-    window.location.href = "./profile.html";
+    window.location.href = "./profile.html?me";
   });
 };
 
