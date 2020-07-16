@@ -8,10 +8,10 @@
 
 <table>
   <tr>
-     <td>Feed Page <img src="./images/home.png" width=450 ></td>
+     <td>Feed Page <img src="./images/home.png" width=900 ></td>
   </tr>
   <tr>
-    <td>Profile Page <img src="./images/profile.png" width=450 ></td>
+    <td>Profile Page <img src="./images/profile.png" width=900 ></td>
   </tr>
   <tr>
   <td>Profile Update Page<img src="./images/edit.png" width=900></td>
