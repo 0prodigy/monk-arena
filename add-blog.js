@@ -30,6 +30,7 @@ function addBlog(blog) {
     let blogPosts = JSON.parse(localStorage.getItem("blogs")) || [];
     blogPosts.push(blog);
     blogs.push(blog);
+    addTouser(blog);
     localStorage.setItem("blogs", JSON.stringify(blogPosts));
   } else {
     return;

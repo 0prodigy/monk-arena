@@ -112,3 +112,11 @@
     font-weight: 500;
   }
 }
+#notification {
+  position: absolute;
+  top: 50px;
+  z-index: 99;
+  right: 120px;
+  background: white;
+  padding: 1rem;
+}

@@ -1,7 +1,25 @@
 let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
 window.onload = () => {
+  renderNotification();
   renderBlogs();
 };
+
+function renderNotification() {
+  let ul = document.createElement("ul");
+  ul.setAttribute("class", "list-group list-unstyled");
+  for (let i = 0; i < blogs.length; i++) {
+    if (blogs[i].user.id == lcoalUser.id) {
+      for (let j = 0; j < blogs[i].likedby.length; j++) {
+        let likeby = blogs[i].likedby[j].name;
+        let li = document.createElement("li");
+        li.setAttribute("class", "list-item");
+        li.textContent = `Your post liked by @${likeby}`;
+        ul.append(li);
+      }
+    }
+  }
+  notify.append(ul);
+}
 
 function like(tar) {
   event.preventDefault();
@@ -31,7 +49,6 @@ function renderBlogs() {
 
 function createRow(blog) {
   let userPic = blog.user.picture;
-  console.log(userPic);
   let likedpep = blog.likedby
     .map((p, i) => {
       if (i <= 3) {
