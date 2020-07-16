@@ -15,7 +15,9 @@
   <tr>
     <td><img src="./images/profile.png" width=450 ></td>
     <td><img src="./images/home.png" width=450 ></td>
-    <td><img src="./images/edit.png" width=900></td>
+  </tr>
+  <tr>
+  <td><img src="./images/edit.png" width=900></td>
   </tr>
  </table>
 
