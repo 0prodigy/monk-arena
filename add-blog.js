@@ -23,6 +23,10 @@ function publishBlog() {
   });
 
   addBlog(blog);
+  title = "";
+  photo = "";
+  blogDesc = "";
+  window.location.href = "./profile.html?me";
 }
 
 function addBlog(blog) {
@@ -30,7 +34,7 @@ function addBlog(blog) {
     let blogPosts = JSON.parse(localStorage.getItem("blogs")) || [];
     blogPosts.push(blog);
     blogs.push(blog);
-    addTouser(blog);
+    // addTouser(blog);
     localStorage.setItem("blogs", JSON.stringify(blogPosts));
   } else {
     return;

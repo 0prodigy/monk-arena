@@ -38,7 +38,7 @@ function like(tar) {
 
 function renderBlogs() {
   let contianer = document.getElementById("home-blog-container");
-  contianer.innerHTML = "";
+  // contianer.innerHTML = "";
   for (let i = blogs.length - 1; i >= 0; i++) {
     let row = document.createElement("div");
     row.setAttribute("class", "row my-2");
@@ -48,7 +48,7 @@ function renderBlogs() {
 }
 
 function createRow(blog) {
-  let userPic = blog.user.picture;
+  // let userPic = blog.user.picture;
   let likedpep = blog.likedby
     .map((p, i) => {
       if (i <= 3) {
@@ -62,7 +62,7 @@ function createRow(blog) {
             <div class="card">
               <a class="nav-link" href="#"
                 ><img
-                  src="${userPic}"
+                  src="./images/monk-avtar.png"
                   alt="Monk Arena"
                   class="img-fluid img-responsive rounded-circle"
                   style="width: 27px; height: 27px;"
