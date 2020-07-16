@@ -4,7 +4,10 @@ const users = JSON.parse(localStorage.getItem("users"));
 
 window.onload = () => {
   let index = window.location.href.indexOf("?");
-  if (window.location.href.indexOf("profile.html?me") != -1) {
+  if (
+    window.location.href.indexOf("profile.html?me") != -1 ||
+    window.location.href.indexOf("?") == -1
+  ) {
     renderNotification();
     renderProfileData(user);
     renderBlogPosts(user);
