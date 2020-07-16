@@ -3,8 +3,24 @@ window.onload = () => {
   renderBlogs();
 };
 
+function like(tar) {
+  event.preventDefault();
+  for (let i = 0; i < blogs.length; i++) {
+    if (blogs[i].id == tar.id) {
+      blogs[i].likes += 1;
+      blogs[i].likedby.push(getlcoalUser());
+      tar.id++;
+      localStorage.setItem("blogs", JSON.stringify(blogs));
+      blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+      console.log(blogs);
+      renderBlogs();
+    }
+  }
+}
+
 function renderBlogs() {
   let contianer = document.getElementById("home-blog-container");
+  contianer.innerHTML = "";
   for (let i = blogs.length - 1; i >= 0; i++) {
     let row = document.createElement("div");
     row.setAttribute("class", "row my-2");
@@ -14,12 +30,22 @@ function renderBlogs() {
 }
 
 function createRow(blog) {
+  let userPic = blog.user.picture;
+  console.log(userPic);
+  let likedpep = blog.likedby
+    .map((p, i) => {
+      if (i <= 3) {
+        blog.likes--;
+        return p.name;
+      }
+    })
+    .join(" ");
   let html = `
           <div class="card mx-auto" style="width: 50%;">
             <div class="card">
               <a class="nav-link" href="#"
                 ><img
-                  src="${blog.user.picture}"
+                  src="${userPic}"
                   alt="Monk Arena"
                   class="img-fluid img-responsive rounded-circle"
                   style="width: 27px; height: 27px;"
@@ -48,7 +74,9 @@ function createRow(blog) {
                   /></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="#" id="${
+                    blog.id
+                  }" onclick="like(this)"
                     ><img
                       src="https://image.flaticon.com/icons/svg/833/833472.svg"
                   /></a>
@@ -56,7 +84,7 @@ function createRow(blog) {
               </ul>
               <p class="card-text text-muted">
                 <small class="form-text text-muted"
-                  >Liked by ${blog.likes || 0} People</small
+                  >Liked by ${likedpep} & other ${blog.likes} People</small
                 >
 
                 <a href="#"
