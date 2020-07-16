@@ -5,10 +5,12 @@ const users = JSON.parse(localStorage.getItem("users"));
 window.onload = () => {
   let index = window.location.href.indexOf("?");
   if (window.location.href.indexOf("profile.html?me") != -1) {
+    renderNotification();
     renderProfileData(user);
     renderBlogPosts(user);
   } else {
     let found = findUser(window.location.href.substring(index + 1));
+    renderNotification();
     renderProfileData(found);
     renderBlogPosts(found);
   }
@@ -20,6 +22,23 @@ function findUser(index) {
       return users[i];
     }
   }
+}
+
+function renderNotification() {
+  let ul = document.createElement("ul");
+  ul.setAttribute("class", "list-group list-unstyled");
+  for (let i = 0; i < blogs.length; i++) {
+    if (blogs[i].user.id == lcoalUser.id) {
+      for (let j = 0; j < blogs[i].likedby.length; j++) {
+        let likeby = blogs[i].likedby[j].name;
+        let li = document.createElement("li");
+        li.setAttribute("class", "list-item");
+        li.textContent = `Your post liked by @${likeby}`;
+        ul.append(li);
+      }
+    }
+  }
+  notify.append(ul);
 }
 
 function renderProfileData(user) {
