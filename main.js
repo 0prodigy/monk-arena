@@ -2,7 +2,6 @@ function getlcoalUser() {
   return JSON.parse(localStorage.getItem("loginUser")) || false;
 }
 let lcoalUser = getlcoalUser();
-console.log(lcoalUser);
 if (!lcoalUser) {
   if (window.location.href.indexOf("login.html") == -1) {
     window.location.href = "login.html";
@@ -23,10 +22,17 @@ function logoutFunc() {
 }
 
 window.addEventListener("load", () => {
-  if (window.location.href.indexOf("/") == -1) {
+  if (lcoalUser) {
     let logout = document.getElementById("logout");
     logout.addEventListener("click", logoutFunc);
-  } else if (window.location.href.indexOf("login.html") == -1) {
-    window.location.href = "login.html";
   }
+  // if (
+  //   window.location.pathname == "/monk-arena/index.html" ||
+  //   window.location.pathname == "/monk-arena/"
+  // ) {
+  //   console.log("we are here agian");
+  //   window.location.href = "login.html";
+  // } else {
+
+  // }
 });
